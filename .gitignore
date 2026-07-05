@@ -1,0 +1,35 @@
+ 
+# Windows system files
+AppData/
+NTUSER*
+ntuser*
+*.TM.blf
+*.regtrans-ms
+
+# Anaconda and Python
+anaconda3/
+.anaconda/
+.conda/
+.continuum/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.matplotlib/
+.spyder-py3/
+
+# Other personal folders
+Documents/
+Downloads/
+Music/
+Pictures/
+Videos/
+OneDrive/
+Contacts/
+Favorites/
+Links/
+Searches/
+output/
+.claude/
+.claude.json
+.rowboat/
+.gitconfig
