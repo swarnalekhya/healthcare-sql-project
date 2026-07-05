@@ -77,15 +77,15 @@ All data is synthetic. No real patient information is used.
 | 10 | Full patient summary report | Multiple CTEs combined |
 | 11 | High-risk patient flagging | Multi-factor CASE WHEN risk score |
 | 12 | Readmission rate by diagnosis | CTE + ICD-10 outcome analysis |
-| 13 | Department performance scorecard | Executive KPI summary |
+| 13 | Department performanc0 is present in 9 out of 20 patients(45%)e scorecard | Executive KPI summary |
 
 ---
 
 ## 📈 Key Findings
 
 - **Cardiology** has the highest 30-day readmission rate, driven primarily by Heart Failure (I50.9) and Acute MI patients
-- **Type 2 Diabetes** is the most common secondary diagnosis across all departments — appearing in 60% of high-risk patients
-- **Neurology** has the longest average LOS at 11+ days, with the widest spread indicating high case complexity
+- **Type 2 Diabetes** (E11.x) is present in 9 out of 20 patients (45%) - the most common secondary diagnosis across Cardiology, Internal medicine and Neurology
+- **Neurology** has the longest average LOS at 8.7 days, more than 4x longer than Obstetrics(2.0 days)
 - **Medicare patients** account for the highest admission volume, consistent with an aging patient population
 - **High-risk patients** (multiple admissions + high-acuity diagnosis) represent a small proportion of patients but drive a disproportionate share of utilization
 
