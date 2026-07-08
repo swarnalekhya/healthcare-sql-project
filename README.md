@@ -17,21 +17,21 @@ All data is synthetic. No real patient information is used.
 ### Comorbidity Heatmap — Which diagnoses appear together most often?
 ![Comorbidity Heatmap](comorbidity_heatmap.png)
 
-> **Finding:** Type 2 Diabetes co-occurs most frequently with Heart Failure and Acute MI — consistent with national comorbidity data showing diabetes as a primary driver of cardiovascular complications.
+> **Finding:** Type 2 Diabetes most frequently co-occurs with Acute MI (I21.x) and  Pneumonia (J18.9), each sharing 4 admissions — consistent with national data showing diabetes as a driver of both cardiovascular and infectious complications.
 
 ---
 
 ### Patient Risk Scatter Plot — Outlier patients by admissions, LOS, and diagnosis complexity
 ![Patient Risk Scatter](patient_risk_scatter.png)
 
-> **Finding:** High-risk patients cluster in the top-right quadrant — high admission frequency combined with long average stays. These patients share high-acuity primary diagnoses (Heart Failure, COPD, Acute MI) and represent the highest utilization burden.
+> **Finding:** High-risk patients cluster in the top-right quadrant — high admission frequency combined with long average stays. These patients are concentrated in high-acuity conditions such as Heart Failure, COPD, and Acute MI, and represent the highest utilization burden.
 
 ---
 
 ### Length of Stay Outlier Detection — Spread within each department
 ![LOS Box Plot](los_outlier_boxplot.png)
 
-> **Finding:** Neurology and Internal Medicine show the widest LOS spread, with statistical outliers representing stays more than 1.5× the interquartile range. These cases likely indicate complications, social determinants of health barriers, or discharge planning delays.
+> **Finding:** Neurology and Internal Medicine show the widest length-of-stay spread, indicating higher case complexity and variability. Longer stays may reflect complications, social determinants of health barriers, or discharge-planning delays.
 
 ---
 
@@ -43,8 +43,7 @@ All data is synthetic. No real patient information is used.
 ### 30-Day Readmission Rate by Department
 ![Readmission Rate](readmission_rate.png)
 
-> **Finding:** Cardiology and Internal Medicine show the highest 30-day readmission rates — aligning with national CMS quality benchmarks where heart failure and pneumonia are top readmission drivers.
-
+> **Finding:** Cardiology shows the highest 30-day readmission rate in this dataset. This aligns with national CMS quality benchmarks, where heart failure and pneumonia are among the top readmission drivers nationally.
 ---
 
 ## 🗃️ Dataset
@@ -77,13 +76,13 @@ All data is synthetic. No real patient information is used.
 | 10 | Full patient summary report | Multiple CTEs combined |
 | 11 | High-risk patient flagging | Multi-factor CASE WHEN risk score |
 | 12 | Readmission rate by diagnosis | CTE + ICD-10 outcome analysis |
-| 13 | Department performanc0 is present in 9 out of 20 patients(45%)e scorecard | Executive KPI summary |
+| 13 | Department performance scorecard | Executive KPI summary |
 
 ---
 
 ## 📈 Key Findings
 
-- **Cardiology** has the highest 30-day readmission rate, driven primarily by Heart Failure (I50.9) and Acute MI patients
+- **Cardiology** has the highest 30-day readmission rate in this dataset - consistent with national CMS benchmarks where cardiac conditions are common readmission drivers. 
 - **Type 2 Diabetes** (E11.x) is present in 9 out of 20 patients (45%) - the most common secondary diagnosis across Cardiology, Internal medicine and Neurology
 - **Neurology** has the longest average LOS at 8.7 days, more than 4x longer than Obstetrics(2.0 days)
 - **Medicare patients** account for the highest admission volume, consistent with an aging patient population
@@ -152,14 +151,5 @@ healthcare-sql-project/
 
 ---
 
-## 👩‍💻 About
-
-Built by **Swarna Lekhya** — Health IT professional specializing in healthcare data analytics.
-
-EHR background + SQL + Tableau + Python = healthcare insights that make sense in a real clinical environment.
-
-🔗 [LinkedIn](https://www.linkedin.com/in/swarnalekhya) | 📧 Open to healthcare data & informatics roles
-
----
 
 *All data in this project is synthetic and for educational purposes only.*
